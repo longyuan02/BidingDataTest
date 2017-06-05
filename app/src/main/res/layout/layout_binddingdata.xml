@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.cn.test.myapplication.Person"></import>
+
+        <import type="com.cn.test.myapplication.MyHandlers"></import>
+
+        <variable
+            name="person"
+            type="Person" />
+
+        <variable
+            name="myHandlers"
+            type="MyHandlers" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{person.age}' />
+
+        <TextView
+            android:id="@+id/tv_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{person.name}' />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick='@{myHandlers.onClickView}'
+            android:text="数据更新btn" />
+    </LinearLayout>
+</layout>
